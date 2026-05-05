@@ -1,0 +1,124 @@
+:root {
+  /* Gengar Light Mode - "Shadow Mist" Theme */
+  --bg: #f4f3f7;
+  --text: #3c334d;
+  --text-h: #2d263a;
+  --border: #d1c9db;
+  --code-bg: #e8e4ee;
+  --accent: #7a5b9f; /* Gengar Body Purple */
+  --accent-bg: rgba(122, 91, 159, 0.1);
+  --accent-border: rgba(122, 91, 159, 0.5);
+  --social-bg: rgba(122, 91, 159, 0.1);
+  --shadow: rgba(45, 38, 58, 0.1) 0 10px 15px -3px, rgba(45, 38, 58, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Gengar Dark Mode - "Night Shade" Theme */
+    --bg: #1a1625;           /* Deep Shadow Base */
+    --text: #cbbbd4;         /* Soft Purple-Grey Text */
+    --text-h: #ff004d;       /* Menacing Gengar Red Eyes */
+    --border: #3c334d;       /* Dark Purple Borders */
+    --code-bg: #2d263a;      /* Shadow Purple Code Blocks */
+    --accent: #7a5b9f;       /* Gengar Signature Purple */
+    --accent-bg: rgba(255, 0, 77, 0.1);
+    --accent-border: rgba(255, 0, 77, 0.4);
+    --social-bg: rgba(60, 51, 77, 0.6);
+    --shadow: rgba(0, 0, 0, 0.6) 0 10px 25px -5px, rgba(0, 0, 0, 0.4) 0 8px 10px -6px;
+  }
+
+  #social .button-icon {
+    filter: drop-shadow(0 0 5px var(--text-h));
+  }
+}
+
+body {
+  margin: 0;
+  transition: background-color 0.3s ease;
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background: var(--bg);
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 700; /* Bolder for that Gengar presence */
+  color: var(--text-h);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--accent); /* Purple accents for code */
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+}
+
+/* Custom Gengar Glow Class for extra "amazing" points */
+.gengar-glow {
+  color: var(--text-h);
+  text-shadow: 0 0 10px rgba(255, 0, 77, 0.6);
+}
